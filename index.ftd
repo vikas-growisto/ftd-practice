@@ -1,0 +1,53 @@
+-- import: fastn-community.github.io/rubik-font
+
+
+
+-- featured-post-card:
+
+-- component featured-post-card:
+
+-- ftd.column:
+types: $rubik-font.types
+width: fill-container
+background.solid: #f5f5f5
+padding-vertical.px: 120
+
+-- ftd.row:
+width: fill-container
+border-left-width.px: 19
+border-color: #24b07e
+spacing: space-between
+max-width.fixed.px: 1320
+align-self: center
+
+-- ftd.column:
+width.fixed.percent: 35
+margin-left.px: 24
+margin-top.px: 20
+
+-- ftd.text: We Transform ideas into digital outcomes.
+color: $inherited.colors.text
+role: $inherited.types.heading-large
+
+-- ftd.text: We Transform ideas into digital outcomes.
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.percent: 55
+
+-- ftd.image:
+width: fill-container
+src: https://cdn.tgdd.vn/Files/2018/02/10/1066033/unannounced-samsung-dex-pad-leaks-out-brings-a-galaxy-s9-with-it_800x450.jpg
+
+
+-- end: ftd.column
+
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: featured-post-card

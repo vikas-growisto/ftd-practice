@@ -1,0 +1,22 @@
+-- import: fastn
+
+-- fastn.package: fastn-community.github.io/set-3-ds
+favicon: https://fastn-community.github.io/set-3-ds/-/fastn-community.github.io/set-3-ds/favicon.svg
+
+-- fastn.dependency: fastn-community.github.io/set-3-cs as cs
+-- fastn.dependency: fastn-community.github.io/set-3-typography as typo
+-- fastn.dependency: fastn-community.github.io/dark-mode-switcher
+-- fastn.dependency: fastn-community.github.io/code-block
+-- fastn.dependency: fastn-community.github.io/rubik-font
+-- fastn.dependency: fastn-community.github.io/source-code-pro-font
+
+-- fastn.auto-import: fastn-community.github.io/code-block as cb
+exposing: code, rendered
+
+-- fastn.auto-import: fastn-community.github.io/set-3-ds/typography as tf
+exposing: h0, h1, h2, h3, markdown
+
+-- fastn.auto-import: fastn-community.github.io/set-3-ds/FASTN/config as my-ds
+-- fastn.auto-import: cs
+-- fastn.auto-import: typo
+
