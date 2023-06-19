@@ -1,37 +1,243 @@
--- import: fastn-community.github.io/rubik-font
+-- import: fastn-community.github.io/rubik-typography
+-- import: fastn-community.github.io/set-3-ds/common
 
 
 
--- featured-post-card:
+-- page:
 
--- component featured-post-card:
+-- header: Fastn
+
+-- page-title: Blog Page
+
+-- featured-post-card: We Transform ideas into digital outcomes.
+cta-label: Button
+src: https://cdn.tgdd.vn/Files/2018/02/10/1066033/unannounced-samsung-dex-pad-leaks-out-brings-a-galaxy-s9-with-it_800x450.jpg
+
+We are an award-winning strategic design company that provides consultancy services and help you create outstanding digital products.
+
+-- feature-blog: Feature blog
+
+Sed nec pharetra felis, in ultrices neque. Phasellus varius semper tellus, ac imperdiet erat commodo id. Aenean lobortis justo et velit ornare malesuada.
+
+-- post-card:
+tag-title: Design Inspiration
+published-on: July 22, 2014 at 10:02 pm 
+title: 10 Hilarious Cartoons That Depict Real-Life Problems of Programmers
+src: https://cdn.tgdd.vn/Files/2018/02/10/1066033/unannounced-samsung-dex-pad-leaks-out-brings-a-galaxy-s9-with-it_800x450.jpg
+
+Redefined the user acquisition and redesigned the onboarding experience, all within 3 working weeks.
+
+-- post-card:
+tag-title: Design Inspiration
+published-on: July 25, 2014 at 10:02 pm 
+title: We Transform ideas into digital outcomes.
+src: https://cdn.tgdd.vn/Files/2018/02/10/1066033/unannounced-samsung-dex-pad-leaks-out-brings-a-galaxy-s9-with-it_800x450.jpg
+
+We are an award-winning strategic design company that provides consultancy services and help you create outstanding digital products.
+
+-- post-card:
+tag-title: Design Inspiration
+published-on: July 30, 2014 at 10:02 pm 
+title: Bringing the world together through live experiences.
+src: https://cdn.tgdd.vn/Files/2018/02/10/1066033/unannounced-samsung-dex-pad-leaks-out-brings-a-galaxy-s9-with-it_800x450.jpg
+
+We are an award-winning strategic design company that provides consultancy services and help you create outstanding digital products.
+
+-- end: feature-blog
+
+-- footer: Fastn
+
+-- end: page
+
+
+
+
+
+
+
+-- component header:
+caption site-name:
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+padding-vertical.px: 20
+align-content: center
 
 -- ftd.column:
-types: $rubik-font.types
+
+-- ftd.text: $header.site-name
+color: $inherited.colors.text
+role: $inherited.types.heading-large
+
+-- end: ftd.column
+
+-- ftd.column:
+
+-- ftd.row:
+spacing.fixed.px: 32
+
+-- ftd.text: Home
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+
+-- ftd.text: Blog
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: header
+
+
+
+
+
+
+
+-- component page-title:
+caption title:
+
+-- ftd.text: $page-title.title
+color: $inherited.colors.text
+role: $inherited.types.heading-large
+padding-top.px: 60
+
+-- end: page-title
+
+
+
+
+
+
+
+
+
+-- component page:
+children child:
+
+-- ftd.column:
 width: fill-container
 background.solid: #f5f5f5
+align-content: center
+
+-- ftd.column:
+types: $rubik-typography.types
+max-width.fixed.px: $common.max-width
+padding-horizontal.px: 10
+children: $page.child
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: page
+
+
+
+
+
+
+
+
+
+-- component featured-post-card:
+caption title:
+body body:
+string cta-label:
+ftd.image-src src:
+boolean $cta-hover: false
+
+-- ftd.column:
+width: fill-container
 padding-vertical.px: 120
+
+-- ftd.desktop:
+
+-- featured-post-card-desktop:
+title: $featured-post-card.title
+body: $featured-post-card.body
+cta-label: $featured-post-card.cta-label
+src: $featured-post-card.src
+$cta-hover: $featured-post-card.cta-hover
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- featured-post-card-mobile:
+title: $featured-post-card.title
+body: $featured-post-card.body
+cta-label: $featured-post-card.cta-label
+src: $featured-post-card.src
+$cta-hover: $featured-post-card.cta-hover
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: featured-post-card
+
+
+
+
+
+
+
+-- component featured-post-card-desktop:
+caption title:
+body body:
+string cta-label:
+ftd.image-src src:
+boolean $cta-hover: false
 
 -- ftd.row:
 width: fill-container
 border-left-width.px: 19
 border-color: #24b07e
-spacing: space-between
-max-width.fixed.px: 1320
 align-self: center
+spacing: space-between
 
 -- ftd.column:
 width.fixed.percent: 35
 margin-left.px: 24
 margin-top.px: 20
 
--- ftd.text: We Transform ideas into digital outcomes.
+-- ftd.text: $featured-post-card-desktop.title
 color: $inherited.colors.text
 role: $inherited.types.heading-large
 
--- ftd.text: We Transform ideas into digital outcomes.
+-- ftd.text: 
 color: $inherited.colors.text
 role: $inherited.types.copy-regular
+margin-top.px: 24
+
+$featured-post-card-desktop.body
+
+-- ftd.row:
+align-content: center
+margin-top.px: 24
+border-width.px: 2
+$on-mouse-enter$: $ftd.set-bool($a = $featured-post-card-desktop.cta-hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $featured-post-card-desktop.cta-hover, v = false)
+border-width.px if { featured-post-card-desktop.cta-hover }: 2
+border-color if { featured-post-card-desktop.cta-hover }: $inherited.colors.accent.primary
+border-color: #24b07e
+background.solid: $inherited.colors.cta-primary.base
+background.solid if { !featured-post-card-desktop.cta-hover }: #24b07e
+
+-- ftd.text: $featured-post-card-desktop.cta-label
+color: #fff
+color if { featured-post-card-desktop.cta-hover }: $inherited.colors.text-strong
+role: $inherited.types.copy-regular
+padding-horizontal.px: 20
+padding-vertical.px: 12
+
+-- end: ftd.row
 
 -- end: ftd.column
 
@@ -40,14 +246,485 @@ width.fixed.percent: 55
 
 -- ftd.image:
 width: fill-container
-src: https://cdn.tgdd.vn/Files/2018/02/10/1066033/unannounced-samsung-dex-pad-leaks-out-brings-a-galaxy-s9-with-it_800x450.jpg
-
+src: $featured-post-card-desktop.src
 
 -- end: ftd.column
 
+-- end: ftd.row
+
+-- end: featured-post-card-desktop
+
+
+
+
+
+
+
+
+-- component featured-post-card-mobile:
+caption title:
+body body:
+string cta-label:
+ftd.image-src src:
+boolean $cta-hover: false
+
+-- ftd.column:
+width: fill-container
+border-left-width.px: 19
+border-color: #24b07e
+padding-left.px: 10
+
+-- ftd.text: $featured-post-card-mobile.title
+color: $inherited.colors.text
+role: $inherited.types.heading-large
+
+-- ftd.text: 
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+margin-top.px: 24
+
+$featured-post-card-mobile.body
+
+-- ftd.row:
+align-content: center
+margin-top.px: 24
+border-width.px: 2
+$on-mouse-enter$: $ftd.set-bool($a = $featured-post-card-mobile.cta-hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $featured-post-card-mobile.cta-hover, v = false)
+border-width.px if { featured-post-card-mobile.cta-hover }: 2
+border-color if { featured-post-card-mobile.cta-hover }: $inherited.colors.accent.primary
+border-color: #24b07e
+background.solid: $inherited.colors.cta-primary.base
+background.solid if { !featured-post-card-mobile.cta-hover }: #24b07e
+
+-- ftd.text: $featured-post-card-mobile.cta-label
+color: #fff
+color if { featured-post-card-mobile.cta-hover }: $inherited.colors.text-strong
+role: $inherited.types.copy-regular
+padding-horizontal.px: 20
+padding-vertical.px: 12
+
+-- end: ftd.row
+
+-- ftd.image:
+width: fill-container
+margin-top.px: 40
+src: $featured-post-card-mobile.src
+
+-- end: ftd.column
+
+-- end: featured-post-card-mobile
+
+
+
+
+
+
+
+
+-- component feature-blog:
+caption title:
+body body:
+children child:
+tags-list list topics:
+
+-- ftd.column:
+width: fill-container
+align-self: center
+
+-- ftd.text: $feature-blog.title
+color: $inherited.colors.text
+role: $inherited.types.heading-large
+align-self: center
+
+-- ftd.text: 
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+margin-top.px: 20
+
+$feature-blog.body
+
+-- ftd.desktop:
+
+-- ftd.row:
+margin-top.px: 50
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.percent: 77
+spacing.fixed.px: 24
+border-right-width.px: 1
+border-color: $inherited.colors.border
+padding-bottom.px: 30
+children: $feature-blog.child
+
+-- end: ftd.column
+
+-- ftd.column:
+max-width.fixed.percent: 23
+
+-- side-bar: Recommended Topics
+$loop$: $feature-blog.topics as $obj
+tag-name: $obj.tag-name
+tag-link: $obj.tag-link
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.desktop
+
+
+-- ftd.mobile:
+
+-- ftd.column:
+margin-top.px: 50
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.percent: 100
+spacing.fixed.px: 24
+border-bottom-width.px: 1
+border-color: $inherited.colors.border
+padding-bottom.px: 30
+children: $feature-blog.child
+
+-- end: ftd.column
+
+-- side-bar: Recommended Topics
+$loop$: $feature-blog.topics as $obj
+tag-name: $obj.tag-name
+tag-link: $obj.tag-link
+
+-- end: ftd.column
+
+-- end: ftd.mobile
+
+-- end: ftd.column
+
+-- end: feature-blog
+
+
+
+
+
+
+
+-- component post-card:
+caption tag-title:
+string published-on:
+caption title:
+body body:
+ftd.image-src src:
+
+-- ftd.row:
+width: fill-container
+padding-right.px: 20
+
+-- ftd.desktop:
+
+-- post-card-desktop:
+tag-title: $post-card.tag-title
+published-on: $post-card.published-on
+title: $post-card.title
+body: $post-card.body
+src: $post-card.src
+
+-- end: ftd.desktop
+
+-- ftd.mobile:
+
+-- post-card-mobile:
+tag-title: $post-card.tag-title
+published-on: $post-card.published-on
+title: $post-card.title
+body: $post-card.body
+src: $post-card.src
+
+-- end: ftd.mobile
+
+-- end: ftd.row
+
+-- end: post-card
+
+
+
+
+
+
+
+
+-- component post-card-desktop:
+caption tag-title:
+string published-on:
+caption title:
+body body:
+ftd.image-src src:
+
+-- ftd.row:
+spacing: space-between
+wrap: true
+
+-- ftd.column:
+width.fixed.percent: 55
+
+-- ftd.row:
+align-content: center
+
+-- ftd.text: $post-card-desktop.tag-title
+background.solid: #24b07e66
+color: #24b07e
+padding-vertical.px: 5
+padding-horizontal.px: 10
+role: $inherited.types.copy-regular
+
+-- ftd.text: $post-card-desktop.published-on 
+padding-vertical.px: 5
+padding-horizontal.px: 10
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- ftd.text: $post-card-desktop.title
+color: $inherited.colors.text
+role: $inherited.types.heading-small
+margin-top.px: 24
+
+-- ftd.text: 
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+margin-top.px: 12
+
+$post-card-desktop.body 
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.percent: 35
+
+-- ftd.image:
+width.fixed.percent: 100
+src: $post-card-desktop.src 
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: post-card-desktop
+
+
+
+
+
+
+
+
+-- component post-card-mobile:
+caption tag-title:
+string published-on:
+caption title:
+body body:
+ftd.image-src src:
+
+-- ftd.column:
+
+-- ftd.column:
+width.fixed.percent: 100
+
+-- ftd.row:
+align-content: center
+
+-- ftd.text: $post-card-mobile.tag-title
+background.solid: #24b07e66
+color: #24b07e
+padding-vertical.px: 5
+padding-horizontal.px: 10
+role: $inherited.types.copy-regular
+
+-- ftd.text: $post-card-mobile.published-on 
+padding-vertical.px: 5
+padding-horizontal.px: 10
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- ftd.text: $post-card-mobile.title
+color: $inherited.colors.text
+role: $inherited.types.heading-small
+margin-top.px: 24
+
+-- ftd.text: 
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+margin-top.px: 12
+
+$post-card-mobile.body 
+
+-- end: ftd.column
+
+-- ftd.column:
+width.fixed.percent: 80
+margin-top.px: 25
+
+-- ftd.image:
+width.fixed.percent: 100
+src: $post-card-mobile.src 
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: post-card-mobile
+
+
+
+
+
+
+
+
+
+-- component side-bar:
+caption title:
+string tag-link:
+boolean $hover: false
+string tag-name:
+
+-- ftd.column:
+width: fill-container
+padding-left.px: 20
+background.solid: red
+
+-- ftd.text: $side-bar.title 
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+
+-- ftd.row:
+margin-top.px: 15
+wrap: true
+spacing.fixed.px: 10
+
+-- ftd.text: $side-bar.tag-name
+background.solid: #24b07e66
+background.solid if { side-bar.hover }: $inherited.colors.cta-primary.base
+color: #24b07e
+color if {side-bar.hover }: 
+padding-vertical.px: 5
+padding-horizontal.px: 10
+role: $inherited.types.copy-regular
+link: $side-bar.tag-link
+$on-mouse-enter$: $ftd.set-bool($a = $side-bar.hover, v = true)
+$on-mouse-leave$: $ftd.set-bool($a = $side-bar.hover, v = false)
 
 -- end: ftd.row
 
 -- end: ftd.column
 
--- end: featured-post-card
+-- end: side-bar
+
+
+
+
+
+
+
+
+
+
+-- record tags-list:
+string tag-link:
+string tag-name:
+
+-- tags-list list tags:
+
+-- tags-list:
+tag-name: Programming
+tag-link: blog/
+
+-- tags-list:
+tag-name: Data Science
+tag-link: blog/
+
+-- tags-list:
+tag-name: Technology
+tag-link: blog/
+
+-- tags-list:
+tag-name: Writing
+tag-link: blog/
+
+-- tags-list:
+tag-name: AI/ML
+tag-link: blog/
+
+-- tags-list:
+tag-name: UI/UX
+tag-link: blog/
+
+-- end: tags
+
+
+
+
+
+
+
+
+
+
+-- component footer:
+caption site-name:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.row:
+width: fill-container
+border-bottom-width.px: 1
+border-color: $inherited.colors.text
+padding-vertical.px: 10
+
+-- ftd.text: $footer.site-name
+color: $inherited.colors.text
+role: $inherited.types.heading-large
+
+-- end: ftd.row
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+padding-vertical.px: 20
+align-content: center
+
+-- ftd.column:
+
+-- ftd.text: Copyright © 2023 - fifthtry.com
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+
+-- end: ftd.column
+
+-- ftd.column:
+
+-- ftd.row:
+spacing.fixed.px: 32
+
+-- ftd.text: Home
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+
+-- ftd.text: Blog
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: footer
